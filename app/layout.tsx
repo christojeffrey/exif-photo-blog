@@ -32,6 +32,7 @@ import SelectPhotosProvider from '@/admin/select/SelectPhotosProvider';
 import AdminBatchEditPanel from '@/admin/select/AdminBatchEditPanel';
 
 import '../tailwind.css';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: META_TITLE,
@@ -93,6 +94,12 @@ export default function RootLayout({
         // Center on large screens
         '3xl:flex flex-col items-center',
       )}>
+         <Script
+          defer
+          src="https://analytics.christojeffrey.com/script.js"
+          data-website-id="551f9645-0a89-42e1-a2c8-b31db23de3c9"
+          strategy="afterInteractive"
+        />
         <AppStateProvider areAdminDebugToolsEnabled={ADMIN_DEBUG_TOOLS_ENABLED}>
           <AppTextProvider>
             <SelectPhotosProvider>
